@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ImageBackground, ScrollView } from 'react-native';
 
 export default class App extends Component {
   constructor(){
@@ -32,7 +32,8 @@ export default class App extends Component {
   render() {
     return (
       <ImageBackground source={require('./assets/ssss.png')} style={{ width: '100%', height: '100%' }}>
-      <View style={{ 
+        <ScrollView>
+        <View style={{ 
         flex: 1, 
         marginHorizontal: 8, 
         marginBottom: 30 }
@@ -208,6 +209,7 @@ export default class App extends Component {
         </View>
         
       </View>
+      </ScrollView>
       </ImageBackground>
     );
   }
